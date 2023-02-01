@@ -3,3 +3,15 @@ body {
 }
 
 /* Your code here */
+header{
+    background-color: crimson;
+    padding: 2rem;
+}
+
+/* target sections that are insdie of main */ 
+
+main > section{
+    border:solid 1px black;
+    display: inline-block;
+    margin: 2rem;
+}
