@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500&family=Lato&family=Sono:wght@300&display=swap');
+
+*{
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    max-width:960px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    /* fr means a fraction of the original size */
+    grid-auto-rows: minmax(100px, auto);
+    margin:0 auto;
+    gap:10px;
+    grid-template-areas: 
+        "header header header"
+        "nav nav ."
+        "aside section section"
+        "aside main main"
+        "aside main main"
+        "footer footer footer";
+}
+
+/* set styles for all the grid items inside the container */
+
+.container > * {
+    border: 4px solid crimson;
+    border-radius: 9px;
+    padding: 2em;
+}
+/* set grid areas */
+header{
+    grid-area:header;
+}
+main{
+    grid-area: main;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+nav{
+    grid-area: nav;
+}
+footer{
+    grid-area: footer;
+}
+/* nav styling in flexbox */
+nav{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+}
+a{
+    background-color: crimson;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+a:hover{
+    background-color: grey;
+}
+
+/* Media Queries */
+/* " If [device width] is less than or equal to 700px, then... */
+
+@media screen and (max-width: 810px){
+    .container > * {
+        border-color: black;
+        font-size: 14pt;
+    }
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "aside nav nav"
+        "section section section"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+    }
+    nav{
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
