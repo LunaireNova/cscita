@@ -16,11 +16,14 @@ section {
 #section1 a,
 #section1 a:link {
     color: blue;
+    transition: all .5s ease-out 0s;
 }
 
 #section1 a:hover,
 #section1 a:focus {
     text-decoration: none;
+    color: white;
+    background-color: blue;
 }
 
 #section1 a:active,

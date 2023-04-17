@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spotify Player</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+        <script type="text/javascript" src="main.js" defer></script>
+    </head>
+    <body id="container">
+        <aside id="sidebar">
+            <h1>
+                <i class="fab fa-spotify"></i>
+                Spotify
+            </h1>
+            <a class="selected" href="#">
+                <i class="fas fa-search"></i>
+                Search
+            </a>
+        </aside>
+        <main>
+            <header>
+                <i class="fas fa-search"></i>
+                <input aria-label="Search for tracks" 
+                    type="search" 
+                    placeholder="Search for Artists or Songs" 
+                    id="search" 
+                    value="Depeche Mode" />
+            </header>
+            <article id="featured-content">
+                <section id="artist-section">
+                    <h1>Top Result</h1>
+                    <section id="artist"></section>
+                </section>
+                <section id="track-section">
+                    <h1>Songs</h1>
+                    <section id="tracks"></section>
+                </section>
+                <section id="album-section">
+                    <h1>Albums</h1>
+                    <section id="albums"></section>
+                </section>
+            </article>
+        </main>
+    </body>
+</html>
